@@ -1,7 +1,7 @@
 
 import './Navbar.css'
 
-import Axen from '../../assets/axen logo black.png'
+import Axen from '../../assets/Axen logo black.png'
 
 export default function NavBar({scrollToSection, refs}) {
 
