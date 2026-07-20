@@ -1,0 +1,212 @@
+
+
+.home-container {
+    background-image: url("../../assets/blue-cloudy-bg12.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    text-align: center;
+    padding-bottom: 60px;
+    
+    
+}
+
+.center-components {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.cloud {
+    position: absolute;
+    z-index: 1;
+    top: -60px;
+    opacity: 0.5;
+}
+
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+
+}
+
+/* color: rgb(43, 43, 43); */
+
+/* rgb(26, 26, 26); */
+
+/* linear-gradient(to bottom, rgb(22, 44, 53), rgb(43, 43, 43), rgb(63, 63, 63));*/
+
+.home-quote {
+
+    font-weight: 600;
+    font-size: 60px;
+    opacity: 0.8;
+
+    margin-top: 120px;
+
+    backdrop-filter: blur(10px);
+
+
+    background: linear-gradient(
+        to bottom,
+        rgb(0, 0, 0),
+        rgb(39, 39, 39)
+    );
+
+
+    -webkit-background-clip-: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.home-quote-image {
+    width: 540px;
+}
+
+.home-subtitle {
+    
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.home-btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+.get-started-btn {
+    padding: 12px 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgb(22, 44, 53), rgb(43, 43, 43), rgb(63, 63, 63));
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: white;
+
+    transition: 0.2s ease-in-out;
+
+
+}
+
+.get-started-btn:hover {
+    transform: scale(1.05);
+}
+
+.view-work-btn {
+
+    padding: 12px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(234, 247, 255, 0.842);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-width: 2px;
+    border-color: rgb(199, 199, 199);
+
+    transition: 0.2s ease-in-out;
+}
+
+.view-work-btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+.process-box {
+    height: 250px;
+    background-color: white;
+    margin-top: 80px;
+    border-radius: 30px 30px 0px 0px;
+    padding: 30px;
+    text-align: left;
+
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.027);
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    backdrop-filter: blur(10px);
+
+    opacity: 0.8;
+
+}
+
+
+
+.progress-bar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+
+    margin-bottom: 15px;
+}
+
+.process-box-title {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.progress-bar {
+    width: 80%;
+    background-color: rgb(233, 233, 233);
+    height: 10px;
+    border-radius: 99px;
+    flex: 1;
+
+}
+
+.progress-fill {
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(to left, #64bdf0, #64bdf07c, #64bdf0);
+    border-radius: 10px;
+}
+
+.progress-bar-text {
+    color: rgb(180, 180, 180);
+    font-weight: 500;
+}
+
+.process-task {
+    font-weight: 500;
+}
+
+
+.task-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.final-task {
+    color: rgb(180, 180, 180);
+}
+
+.loading-icon {
+    color: rgb(180, 180, 180);
+}
