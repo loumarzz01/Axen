@@ -25,7 +25,7 @@
     flex-direction: row;
     gap: 50px;
     max-width: 1500px;
-
+    
     justify-content: center;
     align-items: center;
 
@@ -36,8 +36,8 @@
 
 .item-box {
     display: flex;
-    width: 600px;
-    
+    max-width: 600px;
+    min-width: 200px;
     border-radius: 15px;
     gap: 10px;
 
@@ -87,6 +87,10 @@
 
 .item-img {
     border-radius: 20px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    width: 100%;
 }
 
 .recent-work-subtitle {
@@ -107,3 +111,4 @@
     font-size: 12px;
     font-weight: 500;
 }
+

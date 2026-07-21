@@ -58,7 +58,9 @@ export default function Work() {
                             </a>
                             <ArrowUpRight className='link-arrow' size={20}/>
                         </div>
+                        
                         <img className='item-img' src={item.img}/>
+                        
                         
                     </div>
                 ))}
