@@ -3,7 +3,7 @@ import './Work.css'
 import { ArrowUpRight} from 'lucide-react'
 
 import Liminal from '../../assets/liminal fundraising hd.PNG'
-import Fambam from '../../assets/chatting website hd.PNG'
+import Fambam from '../../assets/fambam image.PNG'
 import PaymentSystem from '../../assets/payment system HD.PNG'
 
 export default function Work() {
@@ -18,7 +18,7 @@ export default function Work() {
         },
         {
             name: "Fambam",
-            desc: "Built a real-time chat app demo with secure authentication.",
+            desc: "Built a real-time chat app demo with secure authentication, user accounts, and instant text messaging functionality.",
             link: "https://fambamfr.vercel.app/",
             img: Fambam,
         },
