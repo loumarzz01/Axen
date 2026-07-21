@@ -39,7 +39,7 @@ export default function Work() {
 
             <p className='recent-work-title'>Recent work</p>
 
-            <p className='recent-work-subtitle'> A showcase of my recent builds, experiments, and client work, featuring modern web applications and digital experiences.</p>
+            <p className='recent-work-subtitle'> A showcase of our recent builds, experiments, and client work, featuring modern web applications and digital experiences.</p>
 
             <div className='portfolio-boxes'>
                 {portfolio.map((item, index) => (
