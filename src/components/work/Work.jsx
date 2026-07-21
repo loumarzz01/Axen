@@ -36,6 +36,9 @@ export default function Work() {
     return (
         <div className='work-container'>
 
+            <div className='projects-tag'>
+                <p className='projects-tag-title'>Projects</p>
+            </div>
 
             <p className='recent-work-title'>Recent work</p>
 
