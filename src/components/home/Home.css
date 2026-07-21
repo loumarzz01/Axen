@@ -180,10 +180,12 @@
 }
 
 .progress-fill {
-    width: 90%;
+    
     height: 100%;
     background: linear-gradient(to left, #64bdf0, #64bdf07c, #64bdf0);
     border-radius: 10px;
+
+    transition: width 0.5s ease;
 }
 
 .progress-bar-text {
@@ -203,10 +205,17 @@
     gap: 10px;
 }
 
-.final-task {
-    color: rgb(180, 180, 180);
+.loading-icon {
+    animation: spin 1s linear infinite;
+
 }
 
-.loading-icon {
-    color: rgb(180, 180, 180);
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
 }

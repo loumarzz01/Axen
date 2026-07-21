@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import './Home.css'
 
-import { CircleCheck, LoaderCircle} from "lucide-react";
+import { CircleCheck, LoaderCircle, Circle} from "lucide-react";
 
 
 
@@ -10,21 +10,43 @@ import { CircleCheck, LoaderCircle} from "lucide-react";
 
 export default function Home({scrollToSection, refs}) {
 
-    const [rotate, setRotate] = useState(0)
+    const tasks = [
+        "Getting requirements",
+        "Designing & prototyping",
+        "Developing core features",
+        "Deploying application"
+    ]
 
-    const loadingAnimation = () => {
-        setInterval(() => {
-            setRotate((prev) => prev + 1)
-        }, 15)
+    const [currentTask, setCurrentTask] = useState(0)
 
-        return () => clearInterval(loadingAnimation)
-    }
+    
+    
+    useEffect(() => {
+    
+
+
+
+        const interval = setInterval(() => {
+    
+            setCurrentTask(prev => {
+                if (prev >= tasks.length - 1) { //if the previous value is greater than the length of tasks array
+                    return 0
+                }
+
+                return prev + 1 //otherwise return prev + 1
+            })
+
+        }, 1000)
+
+        return () => clearInterval(interval)
+        
+    }, [])
+
+    const progress = ((currentTask+1) / tasks.length) * 100
 
     
 
-    useEffect(() => {
-        loadingAnimation()
-    }, [])
+    
 
     return (
         <div className='home-page'>
@@ -70,31 +92,31 @@ export default function Home({scrollToSection, refs}) {
 
                     <div className='progress-bar-container'>
                         <div className='progress-bar'>
-                            <div className='progress-fill'></div>
+                            <div style={{width: `${progress}%`}} className='progress-fill'></div>
                         </div>
 
-                        <p className='progress-bar-text'>90%</p>
+                        <p className='progress-bar-text'>{Math.round(progress)}%</p>
                     </div>
 
-                    <div className='task-container'>
-                        <CircleCheck size={18} strokeWidth={3}/>
-                        <p className='process-task'>Getting requirements</p>
-                    </div>
-                    
-                    <div className='task-container'>
-                        <CircleCheck size={18} strokeWidth={3}/>
-                        <p className='process-task'>Designing & prototyping</p>
-                    </div>
+                    {tasks.map((task, index) => (
+                        <div className='task-container' key={task}>
 
-                    <div className='task-container'>
-                        <CircleCheck size={18} strokeWidth={3}/>
-                        <p className='process-task'>Developing core features</p>
-                    </div>
-                    
-                    <div className='task-container'>
-                        <LoaderCircle className='loading-icon' style={{ transform: `rotate(${rotate}deg)` }} size={18} strokeWidth={3}/>
-                        <p className='process-task final-task'>Deploying final application</p>
-                    </div>
+                            {index < currentTask && (
+                                <CircleCheck size={20} strokeWidth={2.5}/>
+                            )}
+
+                            {index === currentTask && (
+                                <LoaderCircle className='loading-icon' size={20} strokeWidth={2.5}/>
+                            )}
+
+                            {index > currentTask && (
+                                <Circle size={20} strokeWidth={2.5}/>
+                             )}
+                                
+
+                            <p className='process-task'>{task}</p>
+                        </div>
+                    ))}
                     
 
                 
